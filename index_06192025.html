@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Alex the Locksmith - Bay Area Locksmith Services</title>
+  <meta name="description" content="Alex the Locksmith provides fast, reliable 24/7 locksmith services across the SF Bay Area. Specializing in emergency lockouts, rekeying, and digital lock installation.">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="favicon.svg">
+  <link rel="stylesheet" href="assets/css/tailwind.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-blue: #2C2E6A;
+      --brand-blue-darker: #212352;
+      --brand-beige: #E2DCD3;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--brand-beige);
+    }
+    .bg-brand-blue { background-color: var(--brand-blue); }
+    .text-brand-blue { color: var(--brand-blue); }
+    .bg-brand-beige { background-color: var(--brand-beige); }
+    .text-brand-beige { color: var(--brand-beige); }
+    .hover\:bg-brand-blue-darker:hover { background-color: var(--brand-blue-darker); }
+    .ring-brand-blue { --tw-ring-color: var(--brand-blue) !important; }
+
+    .hero-pattern {
+      background-color: var(--brand-blue);
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+      background-size: 20px 20px;
+    }
+    .cta-button {
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .gallery-item .caption {
+      transition: opacity 0.3s ease-in-out;
+    }
+    .gallery-item:hover .caption {
+      opacity: 1;
+    }
+    .logo-background-wrapper::before {
+      content: "";
+      background-image: url('websitelogo.avif');
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position: center;
+      position: absolute;
+      inset: 0;
+      opacity: 0.05;
+      z-index: 0;
+    }
+  </style>
+
+  <!-- GA4 base tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8EVGNLBNK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-S8EVGNLBNK');
+  </script>
+
+  <!-- Google Ads conversion + fallback -->
+  <script>
+    function gtag_report_conversion() {
+      gtag('event', 'conversion', {
+        send_to: 'AW-17201831360/EIiiCPPytNoaEMC7vIpA'
+      });
+    // no return false, no window.location
+  }
+  </script>
+</head>
+
+<body class="text-gray-900">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="#" class="flex items-center">
+        <h1 class="text-xl sm:text-2xl font-bold text-gray-900 flex items-center">
+          <img src="websitelogo.avif" alt="Alex the Locksmith Logo" class="h-12 w-auto mr-3"
+               onerror="this.onerror=null;this.src='https://placehold.co/100x100/E2DCD3/2C2E6A?text=Logo';">
+          <span>Alex the Locksmith</span>
+        </h1>
+      </a>
+      <nav class="hidden md:flex items-center">
+        <a href="tel:1-628-946-1839"
+          onclick="gtag_report_conversion()"
+          class="bg-brand-blue text-white font-semibold py-2 px-4 rounded-lg hover:bg-brand-blue-darker cta-button">
+          Call Now: (628) 946-1839
+        </a>
+      </nav>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-900 focus:outline-none">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+      <a href="tel:1-628-946-1839"
+         onclick="gtag_report_conversion()"
+         class="block py-4 px-6 text-center text-brand-blue font-semibold border-b hover:bg-gray-100">
+        Call Now: (628) 946-1839
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-pattern text-white text-center py-20 sm:py-32">
+    <div class="container mx-auto px-6">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-4">Alex the Locksmith</h1>
+      <h2 class="text-3xl md:text-5xl font-semibold leading-tight mb-2 text-brand-beige">Fast, Reliable Locksmith Services</h2>
+      <p class="text-2xl md:text-3xl font-semibold text-gray-300 mb-8">Serving the Entire SF Bay Area</p>
+      <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <a href="tel:1-628-946-1839"
+           onclick="gtag_report_conversion()"
+           class="w-full sm:w-auto bg-white text-brand-blue font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-200 cta-button">
+          Call for Emergency Service
+        </a>
+        <a href="#contact" class="w-full sm:w-auto bg-brand-beige text-brand-blue font-bold py-4 px-8 rounded-lg text-lg hover:bg-opacity-90 cta-button">
+          Request a Quote
+        </a>
+      </div>
+      <div class="mt-8">
+        <a href="tel:1-628-946-1839"
+           onclick="gtag_report_conversion()"
+           class="text-2xl lg:text-3xl font-bold text-white hover:text-gray-200">
+          Or Call Now: (628) 946-1839
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <div class="relative logo-background-wrapper bg-brand-beige">
+    <section id="services" class="py-16 sm:py-24 relative z-10">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Our Services</h3>
+          <p class="text-lg text-gray-600 mt-2">Comprehensive solutions for all your lock and key needs.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Emergency Lockouts -->
+          <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4 class="text-2xl font-semibold mb-2">Emergency Lockouts</h4>
+            <p class="text-gray-700">Locked out? We provide fast, damage-free entry 24/7 for your home, or office. Get back in quickly.</p>
+          </div>
+          <!-- Residential & Commercial -->
+          <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <h4 class="text-2xl font-semibold mb-2">Residential & Commercial</h4>
+            <p class="text-gray-700">Complete locksmith services for your home and business, including high-security locks and master key systems.</p>
+          </div>
+          <!-- Lock Rekeying -->
+          <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H5v-2H3v-2H1v-4a1 1 0 011-1h4a1 1 0 011 1v4h2v-4a1 1 0 011-1h2a1 1 0 011 1v4h2v-2.257A6 6 0 0115 7z"/>
+              </svg>
+            </div>
+            <h4 class="text-2xl font-semibold mb-2">Lock Rekeying</h4>
+            <p class="text-gray-700">Secure a new property or restrict access by changing your lock's internal pins to work with a new key.</p>
+          </div>
+          <!-- Lock Installation -->
+          <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h4 class="text-2xl font-semibold mb-2">Lock Installation</h4>
+            <p class="text-gray-700">Professional installation of new deadbolts, door locks, and other security hardware to keep you safe.</p>
+          </div>
+          <!-- Digital Lock Installation -->
+          <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 5h9M9 8h6m-5 3h.01M9 14h.01M10 11h.01M13 11h.01M13 14h.01"/>
+              </svg>
+            </div>
+            <h4 class="text-2xl font-semibold mb-2">Digital Lock Installation</h4>
+            <p class="text-gray-700">Upgrade to keyless convenience with our expert installation of smart locks, keypad locks, and digital entry systems.</p>
+          </div>
+          <!-- Lock Repair -->
+          <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h4 class="text-2xl font-semibold mb-2">Lock Repair</h4>
+            <p class="text-gray-700">From sticky deadbolts to broken keys, we diagnose and fix all types of lock issues to restore your security.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="pb-16 sm:pb-24 relative z-10">
+      <div class="container mx-auto px-6 max-w-5xl">
+        <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+          <div class="w-full md:w-1/3 flex-shrink-0">
+            <img src="profile.avif" alt="Alex, the owner of Alex the Locksmith" class="rounded-full w-48 h-48 md:w-64 md:h-64 mx-auto object-cover shadow-lg border-4 border-white"
+                 onerror="this.onerror=null;this.src='https://placehold.co/256x256/2C2E6A/E2DCD3?text=Alex';">
+          </div>
+          <div class="w-full md:w-2/3 text-center md:text-left">
+            <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Meet Alex, Your Local Security Expert</h3>
+            <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+              For over 15 years, I've been the trusted locksmith for our community. As the owner of Alex the Locksmith, we are professionals dedicated to providing top-notch service with a friendly touch. Our mission is to ensure your safety and peace of mind by offering reliable solutions and transparent pricing. We proudly serve the SF Bay Area, ready to respond whenever you need us.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-16 sm:py-24 relative z-10">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900">What Our Customers Say</h3>
+          <p class="text-lg text-gray-600 mt-2">We're proud of our 5-star service.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-xl border border-gray-200">
+            <p class="text-gray-600 mb-4">"Alex did a great job today replacing my locks and rekeying one as well. He was professional, efficient, and clearly knew what he was doing. The quality of his work was excellent, and his pricing was very reasonable. I'm happy with the results and would definitely recommend Alex to anyone needing a reliable locksmith."</p>
+            <p class="font-bold text-gray-900">- Ivan W., San Carlos, CA</p>
+          </div>
+          <div class="bg-white p-8 rounded-xl border border-gray-200">
+            <p class="text-gray-600 mb-4">"Alex helped me install my new smart lock. Really professional work and clean finish on my door. He was on time and was very professional throughout the job."</p>
+            <p class="font-bold text-gray-900">- Prerak P., Palo Alto, CA</p>
+          </div>
+          <div class="bg-white p-8 rounded-xl border border-gray-200">
+            <p class="text-gray-600 mb-4">"Alex was fantastic--prompt, professional, and very reasonably priced. He arrived on time, quickly diagnosed and fixed the issue, and even took extra time to make sure everything was working smoothly. Highly recommend!"</p>
+            <p class="font-bold text-gray-900">- Ankur J., Belmont, CA</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="py-16 sm:py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h3 class="text-3xl md:text-4xl font-bold text-gray-900">A Showcase of Our Work</h3>
+        <p class="text-lg text-gray-600 mt-2">Quality and precision in every job.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="gallery-item group relative aspect-square overflow-hidden rounded-lg shadow-md">
+          <img src="IMG_7829.avif" alt="Simplisafe Keypad" class="w-full h-full object-cover"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x400/2C2E6A/E2DCD3?text=Keypad';">
+          <div class="caption absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <p class="text-white text-lg font-semibold text-center px-2">Simplisafe Keypad</p>
+          </div>
+        </div>
+        <div class="gallery-item group relative aspect-square overflow-hidden rounded-lg shadow-md">
+          <img src="IMG_4820.avif" alt="New Handle and Lock Installation" class="w-full h-full object-cover"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x400/2C2E6A/E2DCD3?text=New+Lock';">
+          <div class="caption absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <p class="text-white text-lg font-semibold text-center px-2">New Door Lock Install</p>
+          </div>
+        </div>
+        <div class="gallery-item group relative aspect-square overflow-hidden rounded-lg shadow-md">
+          <img src="IMG_1477.avif" alt="Gate Keypad Lock" class="w-full h-full object-cover"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x400/2C2E6A/E2DCD3?text=Gate+Lock';">
+          <div class="caption absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <p class="text-white text-lg font-semibold text-center px-2">Gate Keypad Lock</p>
+          </div>
+        </div>
+        <div class="gallery-item group relative aspect-square overflow-hidden rounded-lg shadow-md">
+          <img src="IMG_1264.avif" alt="Rekey Lock" class="w-full h-full object-cover"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x400/2C2E6A/E2DCD3?text=Rekey';">
+          <div class="caption absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <p class="text-white text-lg font-semibold text-center px-2">Rekey Lock</p>
+          </div>
+        </div>
+        <div class="gallery-item group relative aspect-square overflow-hidden rounded-lg shadow-md">
+          <img src="IMG_1252.avif" alt="Lock Repair" class="w-full h-full object-cover"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x400/2C2E6A/E2DCD3?text=Repair';">
+          <div class="caption absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <p class="text-white text-lg font-semibold text-center px-2">Vintage Lock Repair</p>
+          </div>
+        </div>
+        <div class="gallery-item group relative aspect-square overflow-hidden rounded-lg shadow-md">
+          <img src="IMG_1231.avif" alt="Car Key Programming" class="w-full h-full object-cover"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x400/2C2E6A/E2DCD3?text=Smart+Lock';">
+          <div class="caption absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <p class="text-white text-lg font-semibold text-center px-2">Smart Keypad and Deadbolt</p>
+          </div>
+        </div>
+        <div class="gallery-item group relative aspect-square overflow-hidden rounded-lg shadow-md">
+          <img src="IMG_1164.avif" alt="Keypad Entry System" class="w-full h-full object-cover"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x400/2C2E6A/E2DCD3?text=Sliding+Door';">
+          <div class="caption absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <p class="text-white text-lg font-semibold text-center px-2">Sliding Door Lock Repair and Install</p>
+          </div>
+        </div>
+        <div class="gallery-item group relative aspect-square overflow-hidden rounded-lg shadow-md">
+          <img src="IMG_0532.avif" alt="Heavy-Duty Commercial Lock" class="w-full h-full object-cover"
+               onerror="this.onerror=null;this.src='https://placehold.co/400x400/2C2E6A/E2DCD3?text=Commercial';">
+          <div class="caption absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <p class="text-white text-lg font-semibold text-center px-2">Commercial Door Lock</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & FORM -->
+  <section id="contact" class="bg-brand-blue text-white">
+    <div class="container mx-auto px-6 py-16 sm:py-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="text-center md:text-left">
+          <h3 class="text-3xl md:text-4xl font-bold">Need Help? Contact Us Now</h3>
+          <p class="mt-4 text-lg text-gray-300">Fill out the form or call us for immediate assistance. We're here to help 24/7.</p>
+          <div class="mt-8">
+            <a href="tel:1-628-946-1839" 
+              onclick="gtag_report_conversion()" 
+              class="text-3xl lg:text-4xl font-bold hover:text-gray-200">
+              Call: (628) 946-1839
+            </a>
+            <p class="mt-2 text-gray-300">24/7 Emergency Service</p>
+          </div>
+        </div>
+        <div id="form-container" class="bg-white p-8 rounded-lg shadow-2xl">
+          <form id="contact-form" action="https://formsubmit.co/alexthelocksmithsf@gmail.com" method="POST">
+            <!-- FormSubmit hidden inputs -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_cc"  value="jason@5thelementdigital.com">
+
+
+            <h4 class="text-2xl font-bold text-gray-900 mb-6">Request a Service</h4>
+            <div class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Full Name <span class="text-red-500">*</span></label>
+                <input type="text" name="name" id="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 ring-brand-blue text-gray-900">
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number <span class="text-red-500">*</span></label>
+                <input type="tel" name="phone" id="phone" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 ring-brand-blue text-gray-900">
+                <p id="phone-error" class="text-red-500 text-sm mt-1 hidden">Please enter a valid 10-digit phone number.</p>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email Address (Optional)</label>
+                <input type="email" name="email" id="email" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:ring-2 ring-brand-blue text-gray-900">
+              </div>
+              <div>
+                <label for="service-needed" class="block text-sm font-medium text-gray-700">Service Needed</label>
+                <select id="service-needed" name="service" class="mt-1 block w-full px-4 py-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 ring-brand-blue text-brand-blue font-semibold">
+                  <option>Emergency Lockout</option>
+                  <option>Residential & Commercial</option>
+                  <option>Lock Rekeying</option>
+                  <option>Lock Installation</option>
+                  <option>Digital Lock Installation</option>
+                  <option>Lock Repair</option>
+                  <option>Car Key Replacement</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-brand-blue hover:bg-brand-blue-darker focus:outline-none focus:ring-2 focus:ring-offset-2 ring-brand-blue cta-button">
+                  Submit Request
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-blue text-gray-300">
+    <div class="container mx-auto px-6 py-8 text-center">
+      <div class="mb-6">
+        <h4 class="font-semibold text-lg text-white mb-3">Proudly Serving the SF Bay Area</h4>
+        <p class="text-sm leading-relaxed max-w-4xl mx-auto">
+          San Bruno • Millbrae • Burlingame • Hillsborough • San Mateo • Belmont • San Carlos • Redwood City • Atherton • Menlo Park • Woodside • Emerald Hills • Palo Alto • Mountain View • Pacifica • El Granada • Half Moon Bay
+        </p>
+      </div>
+      <p>&copy; 2025 Alex the Locksmith. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+<!-- SCRIPTS -->
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Contact Form AJAX Submission
+    const contactForm = document.getElementById('contact-form');
+    const formContainer = document.getElementById('form-container');
+    const phoneInput = document.getElementById('phone');
+    const phoneError = document.getElementById('phone-error');
+
+    contactForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+      if (!phoneRegex.test(phoneInput.value)) {
+        phoneError.classList.remove('hidden');
+        phoneInput.focus();
+        return;
+      }
+      phoneError.classList.add('hidden');
+
+      const ajaxUrl = contactForm.action.replace("/formsubmit.co/", "/formsubmit.co/ajax/");
+      const formData = Object.fromEntries(new FormData(contactForm).entries());
+
+      try {
+        const response = await fetch(ajaxUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData)
+        });
+        const result = await response.json();
+        if (result.success) {
+          gtag('event', 'conversion', {
+            send_to: 'AW-17201831360/Ecl-CPnjtNoaEMC7vIpA'
+          });
+          formContainer.innerHTML = `
+            <div class="text-center">
+              <h3 class="text-2xl font-bold text-brand-blue">Thank You!</h3>
+              <p class="text-gray-600 mt-2">Your request has been sent. We will be in touch very shortly.</p>
+            </div>`;
+        } else {
+          console.error("FormSubmit error:", result);
+        }
+      } catch (error) {
+        console.error("Network or parsing error:", error);
+      }
+    });
+  </script>
+</body>
+</html>

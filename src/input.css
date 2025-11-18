@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You do NOT define .bg-brand-blue or body fonts here. 
+  Tailwind generates those from your config file.
+  We ONLY need the more complex, custom component styles.
+*/
+
+.hero-pattern {
+  background-color: #2C2E6A;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+.cta-button {
+  transition: all 0.3s ease;
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.gallery-item .caption {
+  transition: opacity 0.3s ease-in-out;
+}
+.gallery-item:hover .caption {
+  opacity: 1;
+}
+.logo-background-wrapper::before {
+  content: "";
+  background-image: url(../../websitelogo.avif); /* Corrected Path */
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  z-index: 0;
+}
