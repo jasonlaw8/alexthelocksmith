@@ -527,10 +527,10 @@
             </a>
           </div>
         </div>
-        <div id="form-container" class="bg-brand-beige p-6 sm:p-8 rounded-2xl shadow-2xl border-4 border-white/20">
+        <div id="form-container">
           <div class="text-center mb-6">
-            <h4 class="text-2xl font-bold text-brand-blue mb-1">Request a Service</h4>
-            <p class="text-brand-blue/70 text-sm">Fill out this form and we'll get back to you immediately!</p>
+            <h4 class="text-2xl font-bold text-white mb-1">Request a Service</h4>
+            <p class="text-white/70 text-sm">Fill out this form and we'll get back to you immediately!</p>
           </div>
 
           <form action="https://submit.jotform.com/submit/253490894394168" method="post" id="contact-form" class="space-y-4">
@@ -540,15 +540,15 @@
             <!-- Name & Email Row -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label for="q12_name" class="block text-xs font-bold text-brand-blue uppercase tracking-wide mb-1">Name</label>
+                <label for="q12_name" class="block text-sm font-semibold text-white mb-1">Name</label>
                 <input type="text" id="q12_name" name="q12_name"
-                       class="w-full px-4 py-3 bg-white/80 border-2 border-brand-blue/20 rounded-lg focus:border-brand-blue focus:bg-white focus:outline-none transition-all text-brand-blue placeholder-brand-blue/40"
+                       class="w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-white/50 focus:outline-none transition-all text-gray-800 placeholder-gray-400"
                        placeholder="Your name">
               </div>
               <div>
-                <label for="q3_emailAddress" class="block text-xs font-bold text-brand-blue uppercase tracking-wide mb-1">Email</label>
+                <label for="q3_emailAddress" class="block text-sm font-semibold text-white mb-1">Email</label>
                 <input type="email" id="q3_emailAddress" name="q3_emailAddress"
-                       class="w-full px-4 py-3 bg-white/80 border-2 border-brand-blue/20 rounded-lg focus:border-brand-blue focus:bg-white focus:outline-none transition-all text-brand-blue placeholder-brand-blue/40"
+                       class="w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-white/50 focus:outline-none transition-all text-gray-800 placeholder-gray-400"
                        placeholder="you@email.com">
               </div>
             </div>
@@ -556,15 +556,15 @@
             <!-- Phone & Service Type Row -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label for="q4_phoneNumber" class="block text-xs font-bold text-brand-blue uppercase tracking-wide mb-1">Phone <span class="text-red-600">*</span></label>
+                <label for="q4_phoneNumber" class="block text-sm font-semibold text-white mb-1">Phone <span class="text-red-400">*</span></label>
                 <input type="tel" id="q4_phoneNumber" name="q4_phoneNumber[full]" required
-                       class="w-full px-4 py-3 bg-white/80 border-2 border-brand-blue/20 rounded-lg focus:border-brand-blue focus:bg-white focus:outline-none transition-all text-brand-blue placeholder-brand-blue/40"
+                       class="w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-white/50 focus:outline-none transition-all text-gray-800 placeholder-gray-400"
                        placeholder="(628) 946-1839">
               </div>
               <div>
-                <label for="q14_serviceRequest14" class="block text-xs font-bold text-brand-blue uppercase tracking-wide mb-1">Service Type</label>
+                <label for="q14_serviceRequest14" class="block text-sm font-semibold text-white mb-1">Service Type</label>
                 <select id="q14_serviceRequest14" name="q14_serviceRequest14"
-                        class="w-full px-4 py-3 bg-white/80 border-2 border-brand-blue/20 rounded-lg focus:border-brand-blue focus:bg-white focus:outline-none transition-all text-brand-blue cursor-pointer">
+                        class="w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-white/50 focus:outline-none transition-all text-gray-800 cursor-pointer">
                   <option value="">Select a service...</option>
                   <option value="Emergency Lockout">Emergency Lockout</option>
                   <option value="Residential">Residential</option>
@@ -581,22 +581,22 @@
 
             <!-- Service Address -->
             <div>
-              <label class="block text-xs font-bold text-brand-blue uppercase tracking-wide mb-1">Service Address <span class="text-brand-blue/50 font-normal lowercase">(optional)</span></label>
+              <label class="block text-sm font-semibold text-white mb-1">Service Address <span class="text-white/60 font-normal">(optional)</span></label>
               <div class="grid grid-cols-3 gap-2">
                 <input type="text" name="q15_address[addr_line1]"
-                       class="col-span-3 sm:col-span-2 w-full px-4 py-3 bg-white/80 border-2 border-brand-blue/20 rounded-lg focus:border-brand-blue focus:bg-white focus:outline-none transition-all text-brand-blue placeholder-brand-blue/40"
+                       class="col-span-3 sm:col-span-2 w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-white/50 focus:outline-none transition-all text-gray-800 placeholder-gray-400"
                        placeholder="Street Address">
                 <input type="text" name="q15_address[city]"
-                       class="w-full px-4 py-3 bg-white/80 border-2 border-brand-blue/20 rounded-lg focus:border-brand-blue focus:bg-white focus:outline-none transition-all text-brand-blue placeholder-brand-blue/40"
+                       class="w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-white/50 focus:outline-none transition-all text-gray-800 placeholder-gray-400"
                        placeholder="City">
               </div>
             </div>
 
             <!-- Additional Notes -->
             <div>
-              <label for="q9_additionalRequests" class="block text-xs font-bold text-brand-blue uppercase tracking-wide mb-1">Additional Notes</label>
+              <label for="q9_additionalRequests" class="block text-sm font-semibold text-white mb-1">Additional Notes</label>
               <textarea id="q9_additionalRequests" name="q9_additionalRequests" rows="3"
-                        class="w-full px-4 py-3 bg-white/80 border-2 border-brand-blue/20 rounded-lg focus:border-brand-blue focus:bg-white focus:outline-none transition-all text-brand-blue placeholder-brand-blue/40 resize-none"
+                        class="w-full px-4 py-3 bg-white rounded-lg focus:ring-2 focus:ring-white/50 focus:outline-none transition-all text-gray-800 placeholder-gray-400 resize-none"
                         placeholder="Tell us about your situation..."></textarea>
             </div>
 
@@ -607,11 +607,11 @@
 
             <!-- Submit Button -->
             <button type="submit"
-                    class="w-full bg-brand-blue text-white font-bold py-4 px-6 rounded-xl text-lg hover:bg-brand-blue-darker transition-all cta-button shadow-lg">
+                    class="w-full bg-brand-beige text-brand-blue font-bold py-4 px-6 rounded-xl text-lg hover:bg-white transition-all cta-button shadow-lg mt-2">
               Get a Quote Now
             </button>
 
-            <p class="text-xs text-brand-blue/60 text-center">We typically respond within 15 minutes</p>
+            <p class="text-sm text-white/80 text-center mt-3">We typically respond within 15 minutes</p>
           </form>
         </div>
       </div>
