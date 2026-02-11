@@ -661,37 +661,34 @@
     </div>
   </footer>
 
-<!-- SCRIPTS -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8EVGNLBNK"></script>
 <script>
-  // Define the function that will load the Google scripts
-  function loadGoogleScripts() {
-    // 1. Create the main gtag.js script element
-    const gtagScript = document.createElement('script');
-    gtagScript.async = true;
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-S8EVGNLBNK';
-    document.head.appendChild(gtagScript);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S8EVGNLBNK');
 
-    // 2. Set up the dataLayer and initial gtag configuration
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-S8EVGNLBNK');
-
-    // 3. Define the conversion reporting function so it exists when needed
-    window.gtag_report_conversion = function() {
-      gtag('event', 'conversion', { 'send_to': 'AW-17201831360/EIiiCPPytNoaEMC7vIpA' });
-    }
-
-    // 4. Remove the event listeners so this only runs once
-    window.removeEventListener('scroll', loadGoogleScripts);
-    window.removeEventListener('mousemove', loadGoogleScripts);
-    window.removeEventListener('touchstart', loadGoogleScripts);
+  // Phone call click conversion (used by onclick on call/WhatsApp links)
+  function gtag_report_conversion() {
+    gtag('event', 'conversion', { 'send_to': 'AW-17201831360/EIiiCPPytNoaEMC7vIpA' });
   }
 
-  // Add event listeners that will trigger the loading function on the first user interaction
-  window.addEventListener('scroll', loadGoogleScripts, { once: true });
-  window.addEventListener('mousemove', loadGoogleScripts, { once: true });
-  window.addEventListener('touchstart', loadGoogleScripts, { once: true });
+  // Form submission conversion tracking
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17201831360/Ecl-CPnjtNoaEMC7vIpA',
+        'event_callback': function() {
+          contactForm.submit();
+        }
+      });
+      // Fallback: submit form after 1s if gtag callback doesn't fire
+      setTimeout(function() { contactForm.submit(); }, 1000);
+    });
+  }
 </script>
 </body>
 </html>
