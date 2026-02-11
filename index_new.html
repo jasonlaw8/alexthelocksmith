@@ -380,81 +380,62 @@
     mobileMenuButton.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8EVGNLBNK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S8EVGNLBNK');
 
-    // Contact Form AJAX Submission
-    const contactForm = document.getElementById('contact-form');
-    const formContainer = document.getElementById('form-container');
-    const phoneInput = document.getElementById('phone');
-    const phoneError = document.getElementById('phone-error');
-
-    contactForm.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-      if (!phoneRegex.test(phoneInput.value)) {
-        phoneError.classList.remove('hidden');
-        phoneInput.focus();
-        return;
-      }
-      phoneError.classList.add('hidden');
-
-      const ajaxUrl = contactForm.action.replace("/formsubmit.co/", "/formsubmit.co/ajax/");
-      const formData = Object.fromEntries(new FormData(contactForm).entries());
-
-      try {
-        const response = await fetch(ajaxUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData)
-        });
-        const result = await response.json();
-        if (result.success) {
-          if(typeof gtag === 'function') {
-            gtag('event', 'conversion', {
-              send_to: 'AW-17201831360/Ecl-CPnjtNoaEMC7vIpA'
-            });
-          }
-          formContainer.innerHTML = `
-            <div class="form-success-message">
-              <h3>Thank You!</h3>
-              <p>Your request has been sent. We will be in touch very shortly.</p>
-            </div>`;
-        } else {
-          console.error("FormSubmit error:", result);
-        }
-      } catch (error) {
-        console.error("Network or parsing error:", error);
-      }
-    });
-  
-  // Define the function that will load the Google scripts
-  function loadGoogleScripts() {
-    // 1. Create the main gtag.js script element
-    const gtagScript = document.createElement('script');
-    gtagScript.async = true;
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-S8EVGNLBNK';
-    document.head.appendChild(gtagScript);
-
-    // 2. Set up the dataLayer and initial gtag configuration
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-S8EVGNLBNK');
-    
-    // 3. Define the conversion reporting function so it exists when needed
-    window.gtag_report_conversion = function() {
-      gtag('event', 'conversion', { 'send_to': 'AW-17201831360/EIiiCPPytNoaEMC7vIpA' });
-    }
-
-    // 4. Remove the event listeners so this only runs once
-    window.removeEventListener('scroll', loadGoogleScripts);
-    window.removeEventListener('mousemove', loadGoogleScripts);
-    window.removeEventListener('touchstart', loadGoogleScripts);
+  // Phone call click conversion (used by onclick on call links)
+  function gtag_report_conversion() {
+    gtag('event', 'conversion', { 'send_to': 'AW-17201831360/EIiiCPPytNoaEMC7vIpA' });
   }
 
-  // Add event listeners that will trigger the loading function on the first user interaction
-  window.addEventListener('scroll', loadGoogleScripts, { once: true });
-  window.addEventListener('mousemove', loadGoogleScripts, { once: true });
-  window.addEventListener('touchstart', loadGoogleScripts, { once: true });
+  // Contact Form AJAX Submission with conversion tracking
+  const contactForm = document.getElementById('contact-form');
+  const formContainer = document.getElementById('form-container');
+  const phoneInput = document.getElementById('phone');
+  const phoneError = document.getElementById('phone-error');
+
+  contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (!phoneRegex.test(phoneInput.value)) {
+      phoneError.classList.remove('hidden');
+      phoneInput.focus();
+      return;
+    }
+    phoneError.classList.add('hidden');
+
+    const ajaxUrl = contactForm.action.replace("/formsubmit.co/", "/formsubmit.co/ajax/");
+    const formData = Object.fromEntries(new FormData(contactForm).entries());
+
+    try {
+      const response = await fetch(ajaxUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+      const result = await response.json();
+      if (result.success) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17201831360/Ecl-CPnjtNoaEMC7vIpA'
+        });
+        formContainer.innerHTML = `
+          <div class="form-success-message">
+            <h3>Thank You!</h3>
+            <p>Your request has been sent. We will be in touch very shortly.</p>
+          </div>`;
+      } else {
+        console.error("FormSubmit error:", result);
+      }
+    } catch (error) {
+      console.error("Network or parsing error:", error);
+    }
+  });
 </script>
 </body>
 </html>
