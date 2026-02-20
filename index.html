@@ -688,6 +688,9 @@
 
   // Phone call click conversion (used by onclick on call/WhatsApp links)
   function gtag_report_conversion() {
+    // Push phone click event to dataLayer for GTM conversion tracking
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'event': 'phone_click' });
     gtag('event', 'conversion', { 'send_to': 'AW-17201831360/EIiiCPPytNoaEMC7vIpA' });
   }
 
