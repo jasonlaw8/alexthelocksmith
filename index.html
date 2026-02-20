@@ -705,6 +705,13 @@
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       track_contact('form', 'contact');
+      // Push form submission event to dataLayer for GTM conversion tracking
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'form_submission',
+        'form_id': 'contact-form',
+        'form_name': 'Submit Contact Form'
+      });
       gtag('event', 'conversion', {
         'send_to': 'AW-17201831360/Ecl-CPnjtNoaEMC7vIpA',
         'event_callback': function() {
