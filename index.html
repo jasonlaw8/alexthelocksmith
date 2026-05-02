@@ -606,6 +606,15 @@
             </div>
 
 
+            <!-- Email (optional) -->
+            <div class="mb-4">
+              <label for="q13_email" class="block text-white font-medium mb-2">Email <span class="text-white/60 font-normal text-sm">(optional)</span></label>
+              <input type="email" id="q13_email" name="q13_email"
+                     class="w-full px-4 py-3 bg-white rounded-lg border-2 border-transparent focus:border-brand-beige focus:outline-none"
+                     style="color: #1f2937; height: 50px;"
+                     placeholder="you@example.com">
+            </div>
+
             <!-- Service Type -->
             <div class="mb-4">
               <label for="q14_serviceRequest" class="block text-white font-medium mb-2">What do you need help with?</label>
@@ -725,6 +734,7 @@
       // Enhanced conversions: provide user-supplied data via in-page gtag.
       // gtag.js automatically hashes these values before sending to Google.
       var nameField = document.getElementById('q12_name');
+      var emailField = document.getElementById('q13_email');
       var phoneField = document.getElementById('q4_phoneNumber');
       var addressField = document.getElementById('q15_address');
       var fullName = nameField && nameField.value ? nameField.value.trim() : '';
@@ -735,6 +745,8 @@
         lastName = parts.join(' ');
       }
       var userData = {};
+      var emailValue = emailField && emailField.value ? emailField.value.trim().toLowerCase() : '';
+      if (emailValue) userData.email = emailValue;
       var phoneE164 = normalizePhoneE164(phoneField && phoneField.value);
       if (phoneE164) userData.phone_number = phoneE164;
       if (firstName || lastName || (addressField && addressField.value)) {
@@ -747,7 +759,7 @@
         }
         userData.address = addr;
       }
-      if (userData.phone_number || userData.address) {
+      if (userData.email || userData.phone_number || userData.address) {
         gtag('set', 'user_data', userData);
       }
 
