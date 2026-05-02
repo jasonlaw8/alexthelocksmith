@@ -698,6 +698,16 @@
     });
   }
 
+  // Normalize a US phone number into E.164 format for enhanced conversions.
+  function normalizePhoneE164(raw) {
+    if (!raw) return '';
+    var digits = String(raw).replace(/\D/g, '');
+    if (!digits) return '';
+    if (digits.length === 10) return '+1' + digits;
+    if (digits.length === 11 && digits.charAt(0) === '1') return '+' + digits;
+    return String(raw).charAt(0) === '+' ? String(raw).replace(/\s+/g, '') : '+' + digits;
+  }
+
   // Form submission conversion tracking
   var contactForm = document.getElementById('contact-form');
   if (contactForm) {
@@ -711,6 +721,36 @@
         'form_id': 'contact-form',
         'form_name': 'Submit Contact Form'
       });
+
+      // Enhanced conversions: provide user-supplied data via in-page gtag.
+      // gtag.js automatically hashes these values before sending to Google.
+      var nameField = document.getElementById('q12_name');
+      var phoneField = document.getElementById('q4_phoneNumber');
+      var addressField = document.getElementById('q15_address');
+      var fullName = nameField && nameField.value ? nameField.value.trim() : '';
+      var firstName = '', lastName = '';
+      if (fullName) {
+        var parts = fullName.split(/\s+/);
+        firstName = parts.shift() || '';
+        lastName = parts.join(' ');
+      }
+      var userData = {};
+      var phoneE164 = normalizePhoneE164(phoneField && phoneField.value);
+      if (phoneE164) userData.phone_number = phoneE164;
+      if (firstName || lastName || (addressField && addressField.value)) {
+        var addr = {};
+        if (firstName) addr.first_name = firstName;
+        if (lastName) addr.last_name = lastName;
+        if (addressField && addressField.value) {
+          addr.street = addressField.value.trim();
+          addr.country = 'US';
+        }
+        userData.address = addr;
+      }
+      if (userData.phone_number || userData.address) {
+        gtag('set', 'user_data', userData);
+      }
+
       gtag('event', 'conversion', {
         'send_to': 'AW-17201831360/Ecl-CPnjtNoaEMC7vIpA',
         'event_callback': function() {
