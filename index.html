@@ -121,6 +121,69 @@
   <!-- CallRail dynamic number insertion -->
   <script type="text/javascript" src="//cdn.callrail.com/companies/906210810/ecc5ef499e908bae9daa/12/swap.js"></script>
 
+  <!-- LocalBusiness Structured Data (Local SEO / service-area signal) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Locksmith",
+    "@id": "https://alexthelocksmith.net/#business",
+    "name": "Alex the Locksmith",
+    "url": "https://alexthelocksmith.net/",
+    "image": "https://alexthelocksmith.net/profile.jpg",
+    "logo": "https://alexthelocksmith.net/websitelogo.png",
+    "telephone": "+1-650-444-1034",
+    "priceRange": "$$",
+    "description": "Fast, reliable 24/7 locksmith services across San Mateo and the Mid-Peninsula — emergency lockouts, rekeying, lock repair, and smart lock installs.",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Mateo",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "San Mateo", "sameAs": "https://en.wikipedia.org/wiki/San_Mateo,_California" },
+      { "@type": "City", "name": "Foster City", "sameAs": "https://en.wikipedia.org/wiki/Foster_City,_California" },
+      { "@type": "City", "name": "Burlingame", "sameAs": "https://en.wikipedia.org/wiki/Burlingame,_California" },
+      { "@type": "City", "name": "Hillsborough", "sameAs": "https://en.wikipedia.org/wiki/Hillsborough,_California" },
+      { "@type": "City", "name": "Millbrae", "sameAs": "https://en.wikipedia.org/wiki/Millbrae,_California" },
+      { "@type": "City", "name": "Belmont", "sameAs": "https://en.wikipedia.org/wiki/Belmont,_California" },
+      { "@type": "City", "name": "San Carlos", "sameAs": "https://en.wikipedia.org/wiki/San_Carlos,_California" },
+      { "@type": "City", "name": "Redwood City", "sameAs": "https://en.wikipedia.org/wiki/Redwood_City,_California" },
+      { "@type": "City", "name": "Atherton", "sameAs": "https://en.wikipedia.org/wiki/Atherton,_California" },
+      { "@type": "City", "name": "Menlo Park", "sameAs": "https://en.wikipedia.org/wiki/Menlo_Park,_California" },
+      { "@type": "City", "name": "Woodside", "sameAs": "https://en.wikipedia.org/wiki/Woodside,_California" }
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.5202,
+        "longitude": -122.2758
+      },
+      "geoRadius": 13000
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Locksmith Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency Lockouts" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Residential & Commercial Locksmith" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lock Rekeying" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lock Installation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smart Lock Installation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lock Repair" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Car Key Services" } }
+      ]
+    }
+  }
+  </script>
+
 </head>
 
 <body class="text-gray-900">
