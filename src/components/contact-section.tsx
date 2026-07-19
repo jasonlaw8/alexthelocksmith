@@ -1,6 +1,8 @@
 "use client";
 
-import { ContactForm } from "@/components/contact-form";
+// NOTE: The contact form is temporarily hidden to stop inbound form
+// submissions. The <ContactForm /> component in ./contact-form.tsx is left
+// intact — re-import it and restore the form column below to bring it back.
 import { gtagReportConversion, trackContact } from "@/lib/analytics";
 
 const PHONE_TEL = "tel:1-650-444-1034";
@@ -11,14 +13,14 @@ export function ContactSection() {
   return (
     <section id="contact" className="bg-brand-blue text-white">
       <div className="container mx-auto px-6 py-16 sm:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="text-center md:text-left">
+        <div className="max-w-2xl mx-auto text-center">
+          <div>
             <h3 className="text-3xl md:text-4xl font-bold">
               Need Help? Contact Us Now
             </h3>
             <p className="mt-4 text-lg text-gray-300">
-              Fill out the form or call us for immediate assistance. We&apos;re
-              here to help 24/7.
+              Call or message us for immediate assistance. We&apos;re here to
+              help 24/7.
             </p>
             <div className="mt-8">
               <a
@@ -70,20 +72,6 @@ export function ContactSection() {
                 Contact on WhatsApp
               </a>
             </div>
-          </div>
-          <div
-            id="form-container"
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 sm:p-8"
-          >
-            <div className="text-center mb-8">
-              <h4 className="text-2xl font-bold text-white">
-                Request a Service
-              </h4>
-              <p className="text-white/70 text-sm mt-1">
-                We&apos;ll get back to you within 15 minutes
-              </p>
-            </div>
-            <ContactForm />
           </div>
         </div>
       </div>
