@@ -1,11 +1,6 @@
-const PHOTO_COUNT = 42;
-const PHOTOS = Array.from({ length: PHOTO_COUNT }, (_, i) => {
-  const num = String(i + 1).padStart(2, "0");
-  return {
-    src: `/images/gallery/job-${num}.jpg`,
-    alt: `Alex the Locksmith completed job photo ${i + 1}`,
-  };
-});
+import { GALLERY_PHOTOS } from "@/lib/gallery-photos";
+
+const PHOTOS = GALLERY_PHOTOS;
 
 export function PhotoMarquee() {
   return (

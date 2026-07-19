@@ -1,15 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { GALLERY_PHOTOS } from "@/lib/gallery-photos";
 
-const PHOTO_COUNT = 42;
-const PHOTOS = Array.from({ length: PHOTO_COUNT }, (_, i) => {
-  const num = String(i + 1).padStart(2, "0");
-  return {
-    src: `/images/gallery/job-${num}.jpg`,
-    alt: `Alex the Locksmith completed job photo ${i + 1}`,
-  };
-});
+const PHOTOS = GALLERY_PHOTOS;
+const PHOTO_COUNT = PHOTOS.length;
 
 export function FullGallery() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
