@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { LocalBusinessSchema } from "@/components/local-business-schema";
 import "./globals.css";
 
 const SITE_URL =
@@ -9,14 +10,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Alex the Locksmith – Bay Area Locksmith Services",
   description:
-    "Alex the Locksmith provides fast, reliable 24/7 locksmith services across the SF Bay Area—emergency lockouts, rekeying, and digital lock installs. Call (650) 444-1034 today!",
+    "Alex the Locksmith provides fast, reliable 24/7 locksmith services in San Mateo, Belmont, San Carlos, Redwood City, Palo Alto & the SF Bay Area—emergency lockouts, rekeying, and digital lock installs. Call (650) 444-1034 today!",
   alternates: {
     canonical: "https://alexthelocksmith.net/",
   },
   openGraph: {
     title: "Alex the Locksmith – Bay Area Locksmith Services",
     description:
-      "Fast, reliable 24/7 locksmith services across the SF Bay Area. Call (650) 444-1034 for immediate help.",
+      "Fast, reliable 24/7 locksmith services in San Mateo, Belmont, San Carlos, Redwood City, Palo Alto & the SF Bay Area. Call (650) 444-1034 for immediate help.",
     url: "https://alexthelocksmith.net/",
     type: "website",
     images: ["/images/favicon-96x96.png"],
@@ -75,6 +76,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-S8EVGNLBNK');`}</Script>
+
+        <LocalBusinessSchema />
       </head>
       <body className="text-gray-900">
         {/* Google Tag Manager (noscript) */}
