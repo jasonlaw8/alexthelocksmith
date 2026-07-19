@@ -50,12 +50,6 @@ export function Hero() {
             </svg>
             WhatsApp Us
           </a>
-          <a
-            href="#contact"
-            className="w-full sm:w-auto bg-brand-beige text-brand-blue font-bold py-4 px-8 rounded-lg text-lg cta-button"
-          >
-            Request a Quote
-          </a>
         </div>
         <div className="mt-8">
           <a
