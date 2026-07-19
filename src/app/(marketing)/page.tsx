@@ -273,6 +273,14 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          <div className="text-center mt-10">
+            <a
+              href="/gallery"
+              className="inline-block bg-brand-blue text-white font-semibold py-3 px-6 rounded-lg hover:bg-brand-blue-darker cta-button"
+            >
+              View Full Gallery
+            </a>
+          </div>
         </div>
       </section>
 
