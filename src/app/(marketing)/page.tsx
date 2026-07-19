@@ -1,6 +1,7 @@
 import { Hero } from "@/components/hero";
 import { ContactSection } from "@/components/contact-section";
 import { SiteFooter } from "@/components/site-footer";
+import { PhotoMarquee } from "@/components/photo-marquee";
 
 type Service = {
   title: string;
@@ -110,33 +111,6 @@ const REVIEWS = [
     quote:
       '"Alex was fantastic--prompt, professional, and very reasonably priced. He arrived on time, quickly diagnosed and fixed the issue, and even took extra time to make sure everything was working smoothly. Highly recommend!"',
     name: "- Ankur J., Belmont, CA",
-  },
-];
-
-const GALLERY = [
-  { src: "/images/IMG_7829.avif", alt: "Simplisafe Keypad", caption: "Simplisafe Keypad" },
-  {
-    src: "/images/IMG_4820.avif",
-    alt: "New Handle and Lock Installation",
-    caption: "New Door Lock Install",
-  },
-  { src: "/images/IMG_1477.avif", alt: "Gate Keypad Lock", caption: "Gate Keypad Lock" },
-  { src: "/images/IMG_1264.avif", alt: "Rekey Lock", caption: "Rekey Lock" },
-  { src: "/images/IMG_1252.avif", alt: "Lock Repair", caption: "Vintage Lock Repair" },
-  {
-    src: "/images/IMG_1231.avif",
-    alt: "Car Key Programming",
-    caption: "Smart Keypad and Deadbolt",
-  },
-  {
-    src: "/images/IMG_1164.avif",
-    alt: "Keypad Entry System",
-    caption: "Sliding Door Lock Repair and Install",
-  },
-  {
-    src: "/images/IMG_0532.avif",
-    alt: "Heavy-Duty Commercial Lock",
-    caption: "Commercial Door Lock",
   },
 ];
 
@@ -250,29 +224,9 @@ export default function HomePage() {
               Quality and precision in every job.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {GALLERY.map((item) => (
-              <div
-                key={item.src}
-                className="gallery-item group relative aspect-square overflow-hidden rounded-lg shadow-md"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={400}
-                  height={400}
-                />
-                <div className="caption absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <p className="text-white text-lg font-semibold text-center px-2">
-                    {item.caption}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+        </div>
+        <PhotoMarquee />
+        <div className="container mx-auto px-6">
           <div className="text-center mt-10">
             <a
               href="/gallery"
