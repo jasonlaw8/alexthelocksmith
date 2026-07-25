@@ -7,7 +7,7 @@ import { gtagReportConversion, trackContact } from "@/lib/analytics";
 
 const PHONE_TEL = "tel:1-650-444-1034";
 const WHATSAPP_URL =
-  "https://wa.me/16504441034?text=Hi%20Alex%2C%20I%20need%20locksmith%20services";
+  "https://wa.me/6289461839?text=Hi%20Alex%2C%20I%20need%20locksmith%20services";
 
 export function ContactSection() {
   return (
