@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { LocalBusinessSchema } from "@/components/local-business-schema";
+import { PostHogAnalytics } from "@/components/posthog-analytics";
 import "./globals.css";
 
 const SITE_URL =
@@ -89,6 +90,7 @@ gtag('config', 'G-S8EVGNLBNK');`}</Script>
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <PostHogAnalytics />
         {children}
       </body>
     </html>
