@@ -1,4 +1,5 @@
 import { SiteHeader } from "@/components/site-header";
+import { ChatWidget } from "@/components/chat-widget";
 
 export default function MarketingLayout({
   children,
@@ -9,6 +10,7 @@ export default function MarketingLayout({
     <div className="font-sans">
       <SiteHeader />
       {children}
+      <ChatWidget />
     </div>
   );
 }
