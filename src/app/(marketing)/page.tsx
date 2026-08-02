@@ -1,6 +1,7 @@
 import { Hero } from "@/components/hero";
 import { ContactSection } from "@/components/contact-section";
 import { SiteFooter } from "@/components/site-footer";
+import { Gallery } from "@/components/gallery";
 
 type Service = {
   title: string;
@@ -113,29 +114,96 @@ const REVIEWS = [
   },
 ];
 
+// Job photo gallery. To add more, drop an optimized .avif in /public/images
+// and append an entry here — the gallery grid and lightbox scale automatically.
 const GALLERY = [
-  { src: "/images/IMG_7829.avif", alt: "Simplisafe Keypad", caption: "Simplisafe Keypad" },
+  {
+    src: "/images/IMG_1250.avif",
+    alt: "New handlesets and keypad on a white double door",
+    caption: "Double Door Handleset Install",
+  },
+  {
+    src: "/images/IMG_7979.avif",
+    alt: "Fingerprint smart lever handle with green indicator light",
+    caption: "Fingerprint Smart Lever",
+  },
+  {
+    src: "/images/IMG_1452.avif",
+    alt: "Lockly fingerprint smart lock installed on a white door",
+    caption: "Lockly Fingerprint Smart Lock",
+  },
+  {
+    src: "/images/IMG_1237.avif",
+    alt: "Black smart keypad deadbolt and lever on a wood door",
+    caption: "Smart Keypad Deadbolt",
+  },
+  {
+    src: "/images/IMG_8992.avif",
+    alt: "Yale smart keypad deadbolt on a bronze door",
+    caption: "Yale Smart Deadbolt",
+  },
+  {
+    src: "/images/IMG_9976.avif",
+    alt: "Yale keypad deadbolt and matching lever on a black door",
+    caption: "Yale Keypad Entry Set",
+  },
+  {
+    src: "/images/IMG_4689.avif",
+    alt: "Kwikset black keypad deadbolt",
+    caption: "Kwikset Keypad Deadbolt",
+  },
+  {
+    src: "/images/IMG_9712.avif",
+    alt: "eufy smart lock installed on an exterior gray gate",
+    caption: "eufy Smart Lock Install",
+  },
+  {
+    src: "/images/IMG_1476.avif",
+    alt: "Mechanical push-button lockbox mounted on a cedar gate",
+    caption: "Mechanical Gate Lockbox",
+  },
+  {
+    src: "/images/IMG_7732.avif",
+    alt: "Schlage deadbolt and lever on a gray commercial metal door",
+    caption: "Commercial Deadbolt & Lever",
+  },
+  {
+    src: "/images/IMG_9227.avif",
+    alt: "Sargent mortise cylinder on a chrome storefront door",
+    caption: "Storefront Mortise Cylinder",
+  },
+  {
+    src: "/images/IMG_7533.avif",
+    alt: "Brass interchangeable core cylinder being rekeyed",
+    caption: "Interchangeable Core Rekey",
+  },
+  {
+    src: "/images/IMG_0554.avif",
+    alt: "Electronic safe keypad lock",
+    caption: "Electronic Safe Lock",
+  },
+  { src: "/images/IMG_7829.avif", alt: "SimpliSafe keypad", caption: "SimpliSafe Keypad" },
   {
     src: "/images/IMG_4820.avif",
-    alt: "New Handle and Lock Installation",
+    alt: "New handle and lock installation",
     caption: "New Door Lock Install",
   },
-  { src: "/images/IMG_1477.avif", alt: "Gate Keypad Lock", caption: "Gate Keypad Lock" },
-  { src: "/images/IMG_1264.avif", alt: "Rekey Lock", caption: "Rekey Lock" },
-  { src: "/images/IMG_1252.avif", alt: "Lock Repair", caption: "Vintage Lock Repair" },
+  { src: "/images/IMG_1477.avif", alt: "Gate keypad lock", caption: "Gate Keypad Lock" },
+  { src: "/images/IMG_1264.avif", alt: "Rekeyed lock", caption: "Rekey Lock" },
+  { src: "/images/IMG_1252.avif", alt: "Vintage lock repair", caption: "Vintage Lock Repair" },
   {
     src: "/images/IMG_1231.avif",
-    alt: "Car Key Programming",
+    alt: "Smart keypad and deadbolt",
     caption: "Smart Keypad and Deadbolt",
   },
   {
     src: "/images/IMG_1164.avif",
-    alt: "Keypad Entry System",
+    alt: "Sliding door lock repair and install",
     caption: "Sliding Door Lock Repair and Install",
   },
   {
     src: "/images/IMG_0532.avif",
-    alt: "Heavy-Duty Commercial Lock",
+    alt: "Heavy-duty commercial lock",
     caption: "Commercial Door Lock",
   },
 ];
@@ -250,29 +318,10 @@ export default function HomePage() {
               Quality and precision in every job.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {GALLERY.map((item) => (
-              <div
-                key={item.src}
-                className="gallery-item group relative aspect-square overflow-hidden rounded-lg shadow-md"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={400}
-                  height={400}
-                />
-                <div className="caption absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <p className="text-white text-lg font-semibold text-center px-2">
-                    {item.caption}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <Gallery items={GALLERY} />
+          <p className="text-center text-gray-500 text-sm mt-8">
+            Tap any photo to view it larger.
+          </p>
         </div>
       </section>
 

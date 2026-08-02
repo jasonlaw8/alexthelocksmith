@@ -41,11 +41,13 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.gallery-item .caption {
-  transition: opacity 0.3s ease-in-out;
-}
-.gallery-item:hover .caption {
-  opacity: 1;
+/* While the gallery lightbox is open it covers the whole viewport, so hide the
+   sticky header underneath it. A stuck `position: sticky` element is promoted to
+   its own compositor layer in Chromium and can paint above a later `fixed`
+   overlay regardless of z-index, so hiding it is more reliable than out-stacking
+   it. */
+.lightbox-open header {
+  visibility: hidden;
 }
 
 .logo-background-wrapper::before {
